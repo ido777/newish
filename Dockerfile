@@ -3,6 +3,7 @@ MAINTAINER ophir.ido@gmail.com
 
 ENV PYTHONBUFFERED 1
 
+
 COPY ./requirements.txt /requirements.txt
 
 RUN pip install -r /requirements.txt
@@ -13,3 +14,4 @@ COPY ./app /app
 
 RUN adduser -D user
 USER user
+ENV DJANGO_SETTINGS_MODULE app.settings
